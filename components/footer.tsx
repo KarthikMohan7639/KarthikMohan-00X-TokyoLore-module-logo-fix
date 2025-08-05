@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { MapPin } from "lucide-react";
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -65,7 +66,15 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-300 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2025 Tokyo Lore. All rights reserved. Made by <b>Arpit Sehal </b>for Tokyo's stories.</p>
+          <div className="flex flex-col items-center space-y-2">
+            <a href="/" className="cursor-pointer flex items-center space-x-2">
+              <MapPin className="text-pink-600 w-6 h-6" />
+              <span className="text-xl font-bold text-gray-800" style={{fontFamily: 'Playfair Display, serif'}}>
+                Tokyo Lore
+              </span>
+            </a>
+            <p>&copy; 2025 Tokyo Lore. All rights reserved. Made by <b>Arpit Sehal </b>for Tokyo's stories.</p>
+          </div>
         </div>
       </div>
     </footer>
